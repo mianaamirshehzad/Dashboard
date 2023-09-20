@@ -9,60 +9,65 @@ import Card from '../components/Card';
 const Dashboard = () => {
     return (
         <View style={styles.container} >
-            <View style={styles.profile}>
-                <Image
-                    source={Images.profile}
-                    style={styles.img}
-                />
-                <Text style={styles.text} >
-                    Aamir, Pakistan
-                </Text>
-            </View>
-            <Text style={styles.heading} >
-                Know where you wanna go
-            </Text>
-            <View style={styles.category} >
-                <Text style={styles.heading}>
-                    Category
-                </Text>
-                <View style={{ flexDirection: 'row', }}>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
-                        <Category source={Images.beach} name='Beach' />
-                        <Category source={Images.farm} name='Farm' />
-                        <Category source={Images.desert} name='Cliff' />
-                        <Category source={Images.beach} name='Desert' />
-                        <Category source={Images.farm} name='Iland' />
-                        <Category source={Images.desert} name='Ground' />
-                        <Category source={Images.farm} name='Hills' />
-                    </ScrollView>
+            <ScrollView>
+
+                <View style={styles.profile}>
+                    <Image
+                        source={Images.profile}
+                        style={styles.img}
+                    />
+                    <Text style={styles.text} >
+                        Aamir, Pakistan
+                    </Text>
+                    <Text style={styles.heading} >
+                        Know where you wanna go
+                    </Text>
                 </View>
-            </View>
-            <View style={styles.category} >
-                <Text style={styles.heading}>
-                    Inspiration for your trip
-                </Text>
-                <View style={{ flexDirection: 'row', }}>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
-                        <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$5.87' />
-                        <Card source={Images.mountain1} title='Borobudur Park ' desc='Timur, Indonesia' price = '$6.97'/>
-                        <Card source={Images.mountain3} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$3.07'/>
-                        <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$5.87'/>
-                    </ScrollView>
+
+
+                <View style={styles.category} >
+                    <Text style={styles.heading}>
+                        Category
+                    </Text>
+                    <View style={{ flexDirection: 'row', }}>
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
+                            <Category source={Images.beach} name='Beach' />
+                            <Category source={Images.farm} name='Farm' />
+                            <Category source={Images.desert} name='Cliff' />
+                            <Category source={Images.beach} name='Desert' />
+                            <Category source={Images.farm} name='Iland' />
+                            <Category source={Images.desert} name='Ground' />
+                            <Category source={Images.farm} name='Hills' />
+                        </ScrollView>
+                    </View>
                 </View>
-            </View>
-            <View style={styles.category} >
-                <Text style={styles.heading}>
-                    Free destination
-                </Text>
-                <View style={{ flexDirection: 'row', }}>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
-                        <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$5.87' />
-                        <Card source={Images.mountain1} title='Borobudur Park ' desc='Timur, Indonesia' price = '$6.97'/>
-                        <Card source={Images.mountain3} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$3.07'/>
-                        <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price = '$5.87'/>
-                    </ScrollView>
+                <View style={styles.category} >
+                    <Text style={styles.heading}>
+                        Inspiration for your trip
+                    </Text>
+                    <View style={{ flexDirection: 'row', }}>
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
+                            <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$5.87' />
+                            <Card source={Images.mountain1} title='Borobudur Park ' desc='Timur, Indonesia' price='$6.97' />
+                            <Card source={Images.mountain3} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$3.07' />
+                            <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$5.87' />
+                        </ScrollView>
+                    </View>
                 </View>
-            </View>
+                <View style={styles.category} >
+                    <Text style={styles.heading}>
+                        Free destination
+                    </Text>
+                    <View style={{ flexDirection: 'row', }}>
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
+                            <Card source={Images.mountain3} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$5.87' />
+                            <Card source={Images.mountain1} title='Borobudur Park ' desc='Timur, Indonesia' price='$6.97' />
+                            <Card source={Images.mountain3} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$3.07' />
+                            <Card source={Images.mountain2} title='Kawan Ijen' desc='Jawa Timur, Indonesia' price='$5.87' />
+                        </ScrollView>
+                    </View>
+                </View>
+            </ScrollView>
         </View>
     );
 };
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
     profile: {
         justifyContent: 'center',
         alignItems: 'center',
-
+        paddingTop: 5
     },
     text: {
         color: Colors.black
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
     },
     category: {
         padding: 20,
-        marginLeft: 10
+        // marginLeft: 10
     }
 });
 
