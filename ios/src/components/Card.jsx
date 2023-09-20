@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
-import { Images } from '../assets/Paths';
 
 
 const Card = (props) => {
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
         padding: 5
     },
     textContainer: {
-        // marginLeft: 14,
         marginBottom: 5
     },
     priceContainer: {

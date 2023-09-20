@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, SafeAreaView, Text, View, Image, ScrollView } from 'react-native';
 import { Images } from '../assets/Paths';
 import { Colors } from '../assets/Colors';
 import Category from '../components/Category';
@@ -8,16 +8,15 @@ import Card from '../components/Card';
 
 const Dashboard = () => {
     return (
-        <View style={styles.container} >
+        <SafeAreaView style={styles.container} >
             <ScrollView>
-
                 <View style={styles.profile}>
                     <Image
                         source={Images.profile}
                         style={styles.img}
                     />
                     <Text style={styles.text} >
-                        Aamir, Pakistan
+                        Lexa, United States
                     </Text>
                     <Text style={styles.heading} >
                         Know where you wanna go
@@ -68,7 +67,7 @@ const Dashboard = () => {
                     </View>
                 </View>
             </ScrollView>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -77,6 +76,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
     img: {
         width: 70,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     profile: {
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 5
+        paddingTop: 10
     },
     text: {
         color: Colors.black
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     category: {
-        padding: 20,
+        padding: 10,
         // marginLeft: 10
     }
 });
